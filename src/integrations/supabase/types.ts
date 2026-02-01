@@ -14,7 +14,54 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      analysis_history: {
+        Row: {
+          avoid_actions: Json
+          content: string
+          content_type: string
+          created_at: string
+          delay_reduces_risk: boolean
+          file_name: string | null
+          file_url: string | null
+          id: string
+          reasoning: Json
+          safe_actions: Json
+          signal: string
+          signal_label: string
+          uncertainty_disclosure: string
+        }
+        Insert: {
+          avoid_actions?: Json
+          content: string
+          content_type?: string
+          created_at?: string
+          delay_reduces_risk?: boolean
+          file_name?: string | null
+          file_url?: string | null
+          id?: string
+          reasoning?: Json
+          safe_actions?: Json
+          signal: string
+          signal_label: string
+          uncertainty_disclosure: string
+        }
+        Update: {
+          avoid_actions?: Json
+          content?: string
+          content_type?: string
+          created_at?: string
+          delay_reduces_risk?: boolean
+          file_name?: string | null
+          file_url?: string | null
+          id?: string
+          reasoning?: Json
+          safe_actions?: Json
+          signal?: string
+          signal_label?: string
+          uncertainty_disclosure?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
